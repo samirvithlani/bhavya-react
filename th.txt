@@ -1,0 +1,6 @@
+1 comp --.2 copm ->
+
+3 ways are there
+props --> parent to child  a --> b -->c -->z props drilling...
+context
+redux
