@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { UserList } from "./UserList";
 
 export const UserComponent = (props) => {
-  var users = [
+  //var users
+  //function setusers()
+  //state = {users:[]}
+  let [users, setusers] = useState([
     {
       id: 1,
       name: "amit",
@@ -13,11 +16,27 @@ export const UserComponent = (props) => {
       name: "ram",
       age: 30,
     },
-  ];
 
-  function test(){
+    {
+      id: 3,
+      name: "neha",
+      age: 31,
+    },
+  ]);
 
-    alert("test");
+  //react hooks --> useState
+  function deleteUser(id) {
+    users = users.filter((user) => {
+      return user.id != id;
+    });
+
+    console.log("after delete....", users);
+    setusers(users);
+  }
+
+  function test(data) {
+    // alert("test");
+    console.log(data);
   }
   return (
     <div>
@@ -25,7 +44,12 @@ export const UserComponent = (props) => {
       {props.title}
       {/* <button onClick={test}>Click Me</button> */}
       {/* <button onClick={()=>{test()}}>Click Me</button> */}
-      <UserList title={props.title} users={users} test ={test} />
+      <UserList
+        title={props.title}
+        users={users}
+        test={test}
+        delete={deleteUser}
+      />
     </div>
   );
 };
