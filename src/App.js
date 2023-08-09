@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import { HomeComponent } from "./components/HomeComponent";
 import { UserComponent } from "./propsdemo/UserComponent";
 import { StudentReg } from "./components/StudentReg";
+import { UserReg } from "./components/UserReg";
 function App() {
 
   var title = "Royal Tehnosoft";
@@ -14,7 +15,8 @@ function App() {
       {/* <Header /> */}
       {/* <HomeComponent/> */}
       {/* <UserComponent title = {title}/> */}
-      <StudentReg/>
+      {/* <StudentReg/> */}
+      <UserReg/>
       
     </div>
   );
