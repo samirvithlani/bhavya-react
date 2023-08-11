@@ -9,7 +9,9 @@ export const UserReg = () => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm({
+    mode:"onTouched"
+  });
 
   console.log("errors...", errors);
 

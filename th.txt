@@ -4,3 +4,16 @@
 props --> parent to child  a --> b -->c -->z props drilling...
 context
 redux
+
+depedent drop down -->
+india --> states --> cities
+
+react routing...
+
+<BroweserRouter>
+<Routes>
+    <route>
+    <route>
+    <route>
+</>
+</>
