@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export const ApiDemo1 = () => {
   const [users, setusers] = useState([]);
@@ -8,17 +8,20 @@ export const ApiDemo1 = () => {
     console.log(res.data.data);
     setusers(res.data.data);
   };
+  useEffect(() => {
+    getApi();
+  }, []);
 
   return (
     <div>
       ApiDemo1
-      <button
+      {/* <button
         onClick={() => {
           getApi();
         }}
       >
         Get Api
-      </button>
+      </button> */}
       <table className="table table-dark">
         <thead>
           <tr>
@@ -30,19 +33,19 @@ export const ApiDemo1 = () => {
           </tr>
         </thead>
         <tbody>
-          {
-            users?.map((user)=>{
-              return(
-                <tr key={user.id}>
-                  <th scope="row">{user.id}</th>
-                  <td>{user.email}</td>
-                  <td>{user.first_name}</td>
-                  <td>{user.last_name}</td>
-                  <td><img src={user.avatar} alt="avatar" /></td>
-                </tr>
-              )
-            })
-          }
+          {users?.map((user) => {
+            return (
+              <tr key={user.id}>
+                <th scope="row">{user.id}</th>
+                <td>{user.email}</td>
+                <td>{user.first_name}</td>
+                <td>{user.last_name}</td>
+                <td>
+                  <img src={user.avatar} alt="avatar" />
+                </td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>
