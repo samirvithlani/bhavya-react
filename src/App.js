@@ -18,6 +18,8 @@ import { AboutCompany } from "./components/AboutCompany";
 import { ApiDemo1 } from "./components/ApiDemo1";
 import { ApiDemo2 } from "./components/ApiDemo2";
 import { Counter } from "./components/Counter";
+import { UserDetail } from "./components/UserDetail";
+import { UpdateUser } from "./UpdateUser";
 function App() {
   var title = "Royal Tehnosoft";
   return (
@@ -39,6 +41,8 @@ function App() {
         <Route path="/apidemo1" element={<ApiDemo1/>}></Route>
         <Route path="/apidemo2" element={<ApiDemo2/>}></Route>
         <Route path="/counter" element={<Counter/>}></Route>
+        <Route path ="/userdetail/:id" element = {<UserDetail/>}></Route>
+        <Route path = "/userupdate/:id" element = {<UpdateUser/>}></Route>
         <Route path="/*" element={<h1>PAGE NOT FOUND 404</h1>}></Route>
         </Routes> 
     </div>
