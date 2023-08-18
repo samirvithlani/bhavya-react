@@ -20,6 +20,7 @@ import { ApiDemo2 } from "./components/ApiDemo2";
 import { Counter } from "./components/Counter";
 import { UserDetail } from "./components/UserDetail";
 import { UpdateUser } from "./UpdateUser";
+import { DalleDemo } from "./components/DalleDemo";
 function App() {
   var title = "Royal Tehnosoft";
   return (
@@ -30,6 +31,7 @@ function App() {
       {/* <StudentReg/> */}
       {/* <UserReg/> */}
       <Navbar/>
+      <DalleDemo/>
       <Routes>
         <Route path="/" element={<Home/>}></Route>
         <Route path ="/aboutus" element={<AboutUs/>}></Route>
