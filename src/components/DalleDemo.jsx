@@ -15,7 +15,7 @@ export const DalleDemo = () => {
                 "Authorization":"Bearer enter your key here",
                 "Content-Type":"application/json"
             }
-        })
+        })  
 
         console.log(res)
     }

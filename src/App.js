@@ -21,6 +21,7 @@ import { Counter } from "./components/Counter";
 import { UserDetail } from "./components/UserDetail";
 import { UpdateUser } from "./UpdateUser";
 import { DalleDemo } from "./components/DalleDemo";
+import { Countries } from "./context/Countries";
 function App() {
   var title = "Royal Tehnosoft";
   return (
@@ -31,7 +32,7 @@ function App() {
       {/* <StudentReg/> */}
       {/* <UserReg/> */}
       <Navbar/>
-      <DalleDemo/>
+      {/* <DalleDemo/> */}
       <Routes>
         <Route path="/" element={<Home/>}></Route>
         <Route path ="/aboutus" element={<AboutUs/>}></Route>
@@ -46,6 +47,7 @@ function App() {
         <Route path ="/userdetail/:id" element = {<UserDetail/>}></Route>
         <Route path = "/userupdate/:id" element = {<UpdateUser/>}></Route>
         <Route path="/*" element={<h1>PAGE NOT FOUND 404</h1>}></Route>
+        <Route path="/countries" element = {<Countries/>}></Route>
         </Routes> 
     </div>
   );
