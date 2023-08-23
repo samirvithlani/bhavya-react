@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { AppContext } from '../context/context'
 
 export const AboutUs = () => {
+    const {style} = useContext(AppContext)
+    console.log("about us....",style)
     var companies = [
         {
             id:101,

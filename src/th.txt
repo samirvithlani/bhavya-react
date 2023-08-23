@@ -1,0 +1,5 @@
+which code fragment doees  a service use a load the service provider  with print interface?
+1)private java.util.ServiceLoder<Print>   = new java.util.ServiceLoder<>()
+2)private Print print  = new com.service.Provider.PrintImpl();
+private java.util.ServiceLoder<Print>   = ServiceLoder.load(Print.class);
+private Print print  = com.service.Provider.getInstance();

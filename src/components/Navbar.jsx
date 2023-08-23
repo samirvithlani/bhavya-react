@@ -34,6 +34,9 @@ export const Navbar = () => {
         <Link class="nav-link" to="/countries">Countries</Link>
       </li>
       
+      <li class="nav-item">
+        <Link class="nav-link" to="/userlistq">userlistq</Link>
+      </li>
       
     </ul>
     
