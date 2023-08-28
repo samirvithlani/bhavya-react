@@ -37,6 +37,12 @@ export const Navbar = () => {
       <li class="nav-item">
         <Link class="nav-link" to="/userlistq">userlistq</Link>
       </li>
+      <li class="nav-item">
+        <Link class="nav-link" to="/storedata">storedata</Link>
+      </li>
+      <li class="nav-item">
+        <Link class="nav-link" to="/dynamicform">dynamicform</Link>
+      </li>
       
     </ul>
     

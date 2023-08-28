@@ -25,6 +25,9 @@ import { Countries } from "./context/Countries";
 import { AppContext } from "./context/context";
 import { UserListWithQ } from "./components/UserListWithQ";
 import axios from "axios";
+import ProtectedRoutes from "./components/ProtectedRoutes";
+import { StoreData } from "./components/StoreData";
+import { DynamicForm } from "./components/DynamicForm";
 function App() {
   var title = "Royal Tehnosoft";
   var style = {
@@ -47,7 +50,9 @@ function App() {
       <AppContext.Provider value={{ style }}>
         <Routes>
           <Route path="/" element={<Home />}></Route>
-          <Route path="/aboutus" element={<AboutUs />}></Route>
+          <Route element={<ProtectedRoutes/>}>
+            <Route path="/aboutus" element={<AboutUs />}></Route>
+          </Route>
           <Route path="/contactus" element={<ContactUs />}></Route>
           <Route path="/contactus/director" element={<Director />}></Route>
           <Route path="/contactus/ceo" element={<Ceo />}></Route>
@@ -64,6 +69,8 @@ function App() {
           <Route path="/*" element={<h1>PAGE NOT FOUND 404</h1>}></Route>
           <Route path="/countries" element={<Countries />}></Route>
           <Route path="/userlistq" element={<UserListWithQ />}></Route>
+          <Route path ="/storedata" element={<StoreData/>}></Route>
+          <Route path ="/dynamicform" element={<DynamicForm/>}></Route>
         </Routes>
       </AppContext.Provider>
     </div>

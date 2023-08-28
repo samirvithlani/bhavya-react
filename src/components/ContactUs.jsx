@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { ButtonComponent } from './ButtonComponent'
 
 export const ContactUs = () => {
   return (
@@ -12,6 +13,7 @@ export const ContactUs = () => {
                 <Link to ="/contactus/ceo">Ceo</Link>
             </li>
         </ul>
+        <ButtonComponent buttonName="Submit"/>
     </div>
   )
 }
