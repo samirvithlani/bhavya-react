@@ -28,6 +28,9 @@ import axios from "axios";
 import ProtectedRoutes from "./components/ProtectedRoutes";
 import { StoreData } from "./components/StoreData";
 import { DynamicForm } from "./components/DynamicForm";
+import { BoxDemo } from "./mui/box/BoxDemo";
+import { ProductComponent } from "./components/ProductComponent";
+import { CartComponent } from "./components/CartComponent";
 function App() {
   var title = "Royal Tehnosoft";
   var style = {
@@ -71,6 +74,9 @@ function App() {
           <Route path="/userlistq" element={<UserListWithQ />}></Route>
           <Route path ="/storedata" element={<StoreData/>}></Route>
           <Route path ="/dynamicform" element={<DynamicForm/>}></Route>
+          <Route path = "/boxdemo" element = {<BoxDemo/>}></Route>
+          <Route path = "/product" element = {<ProductComponent/>}></Route>
+          <Route path = "/cart" element ={<CartComponent/>}></Route>
         </Routes>
       </AppContext.Provider>
     </div>
